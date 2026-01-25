@@ -1,0 +1,24 @@
+[project]
+site_name = "project_name"
+site_description = "Project name"
+site_url = "https://branchv.github.io/project-name"
+repo_url = "https://github.com/branchv/project-name"
+repo_name = "branchv/project-name"
+nav = [{ "Overview" = "index.md" }]
+
+# https://zensical.org/docs/setup/extensions/
+[project.markdown_extensions]
+admonition = {}
+pymdownx.snippets = { check_paths = true }
+pymdownx.superfences = {}
+toc = { permalink = true }
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
