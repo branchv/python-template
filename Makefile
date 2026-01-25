@@ -5,12 +5,16 @@ all: build test
 .PHONY: build
 build:
 	@rm -rf ./build
-	@PYTHONWARNINGS=ignore uvx copier copy -q --trust --force --vcs-ref=HEAD . ./build
+	@PYTHONWARNINGS=ignore uvx copier copy -q --trust --force --vcs-ref=HEAD -d docs=true -d docker=true . ./build
 
 .PHONY: test
 test:
 	@uv --directory=build run task lint
 	@uv --directory=build run task test -q
+
+.PHONY: docs
+docs:
+	@uv --directory=build run task docs
 
 .PHONY: release
 release:

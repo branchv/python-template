@@ -22,7 +22,7 @@ uvx copier copy --trust gh:branchv/python-template .
   - Automated versioning, changelog, and release via [Conventional Commits](https://www.conventionalcommits.org/)
   - Automated dependency updates via [Dependabot](https://dependabot.com/)
 - Editor integration: [VS Code](https://code.visualstudio.com/)
-- Documentation: [MkDocs](https://www.mkdocs.org/) (optional)
+- Documentation: [Zensical](https://zensical.org/) (optional)
 - Docker support (optional)
 
 ## Recommended Tools

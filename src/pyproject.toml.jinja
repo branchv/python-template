@@ -12,15 +12,12 @@ classifiers = ["Private :: Do Not Upload"]
 {%- endif %}
 
 [dependency-groups]
-{%- if docs %}
-docs = ["mkdocs", "mkdocs-material"]
-{%- endif %}
-dev = ["prek", "pytest", "ruff", "taskipy", "ty"]
+dev = ["prek", "pytest", "ruff", "taskipy", "ty"{%- if docs %}, "zensical"{%- endif %}]
 
 [tool.taskipy.tasks]
 clean = { cmd = "rm -rf .*_cache/ dist/", help = "Remove build artifacts" }
 {% if docs -%}
-docs = { cmd = "mkdocs serve -f docs/mkdocs.yaml", help = "Serve documentation"}
+docs = { cmd = "zensical serve", help = "Serve documentation"}
 {% endif -%}
 lint = { cmd = "prek run --all-files", help = "Run linters and formatters" }
 test = { cmd = "pytest", help = "Run tests" }

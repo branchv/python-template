@@ -1,0 +1,24 @@
+[project]
+site_name = "{{project_name}}"
+site_description = "{{project_description}}"
+site_url = "https://{{repo_username}}.github.io/{{repo_name}}"
+repo_url = "https://github.com/{{repo_username}}/{{repo_name}}"
+repo_name = "{{repo_username}}/{{repo_name}}"
+nav = [{ "Overview" = "index.md" }]
+
+# https://zensical.org/docs/setup/extensions/
+[project.markdown_extensions]
+admonition = {}
+pymdownx.snippets = { check_paths = true }
+pymdownx.superfences = {}
+toc = { permalink = true }
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
